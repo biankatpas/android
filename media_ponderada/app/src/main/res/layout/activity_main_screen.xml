@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <EditText
+        android:id="@+id/edNota1"
+        android:layout_width="368dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/tvPeso1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNota1" />
+
+    <EditText
+        android:id="@+id/edNota2"
+        android:layout_width="368dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/tvPeso2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNota2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edNota3"
+        android:layout_width="368dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/tvpeso3"
+        app:layout_constraintTop_toBottomOf="@+id/tvNota3"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edPeso1"
+        android:layout_width="368dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tvNota2"
+        app:layout_constraintTop_toBottomOf="@+id/tvPeso1"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edPeso2"
+        android:layout_width="368dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tvNota3"
+        app:layout_constraintTop_toBottomOf="@+id/tvPeso2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edPeso3"
+        android:layout_width="368dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/tvpeso3"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="366dp"
+        android:layout_height="41dp"
+        android:onClick="calcularMediaPonderada"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edPeso3"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvNota1"
+        android:layout_width="366dp"
+        android:layout_height="17dp"
+        android:text="Nota 1:"
+        app:layout_constraintBottom_toTopOf="@+id/edNota1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvPeso1"
+        android:layout_width="368dp"
+        android:layout_height="18dp"
+        android:text="Peso 1:"
+        app:layout_constraintBottom_toTopOf="@+id/edPeso1"
+        app:layout_constraintTop_toBottomOf="@+id/edNota1"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvNota2"
+        android:layout_width="368dp"
+        android:layout_height="17dp"
+        android:text="Nota 2:"
+        app:layout_constraintBottom_toTopOf="@+id/edNota2"
+        app:layout_constraintTop_toBottomOf="@+id/edPeso1"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvPeso2"
+        android:layout_width="367dp"
+        android:layout_height="18dp"
+        android:text="Peso 2:"
+        app:layout_constraintBottom_toTopOf="@+id/edPeso2"
+        app:layout_constraintTop_toBottomOf="@+id/edNota2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvNota3"
+        android:layout_width="368dp"
+        android:layout_height="20dp"
+        android:text="Nota 3:"
+        app:layout_constraintBottom_toTopOf="@+id/edNota3"
+        app:layout_constraintTop_toBottomOf="@+id/edPeso2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvpeso3"
+        android:layout_width="368dp"
+        android:layout_height="19dp"
+        android:text="Peso 3:"
+        app:layout_constraintBottom_toTopOf="@+id/edPeso3"
+        app:layout_constraintTop_toBottomOf="@+id/edNota3"
+        tools:layout_editor_absoluteX="8dp" />
+
+</android.support.constraint.ConstraintLayout>

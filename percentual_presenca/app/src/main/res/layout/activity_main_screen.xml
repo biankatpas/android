@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <EditText
+        android:id="@+id/edAulas"
+        android:layout_width="368dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tvFaltas"
+        app:layout_constraintTop_toBottomOf="@+id/tvAulas"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edFaltas"
+        android:layout_width="368dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/tvFaltas"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvAulas"
+        android:layout_width="368dp"
+        android:layout_height="17dp"
+        android:text="Número de aulas"
+        app:layout_constraintBottom_toTopOf="@+id/edAulas"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvFaltas"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Número de faltas"
+        app:layout_constraintBottom_toTopOf="@+id/edFaltas"
+        app:layout_constraintTop_toBottomOf="@+id/edAulas"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="368dp"
+        android:layout_height="39dp"
+        android:onClick="calcularPresenca"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edFaltas"
+        tools:layout_editor_absoluteX="8dp" />
+
+</android.support.constraint.ConstraintLayout>
