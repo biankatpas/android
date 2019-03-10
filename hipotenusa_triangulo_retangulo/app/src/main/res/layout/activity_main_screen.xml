@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <TextView
+        android:id="@+id/tvA"
+        android:layout_width="368dp"
+        android:layout_height="19dp"
+        android:text="Cateto A:"
+        app:layout_constraintBottom_toTopOf="@+id/edA"
+        app:layout_constraintEnd_toEndOf="@+id/edA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvB"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Cateto B:"
+        app:layout_constraintBottom_toTopOf="@+id/edB"
+        app:layout_constraintEnd_toEndOf="@+id/edB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edB"
+        app:layout_constraintTop_toBottomOf="@+id/edA" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="368dp"
+        android:layout_height="81dp"
+        android:onClick="calcularHipotenusa"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edB"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edA"
+        android:layout_width="368dp"
+        android:layout_height="112dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tvB"
+        app:layout_constraintEnd_toEndOf="@+id/tvB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvB"
+        app:layout_constraintTop_toBottomOf="@+id/tvA" />
+
+    <EditText
+        android:id="@+id/edB"
+        android:layout_width="368dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintEnd_toEndOf="@+id/btCalcular"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/tvB" />
+
+</android.support.constraint.ConstraintLayout>

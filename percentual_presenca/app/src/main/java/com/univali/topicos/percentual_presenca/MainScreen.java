@@ -26,7 +26,7 @@ public class MainScreen extends AppCompatActivity
 
     public void calcularPresenca(View v)
     {
-        //        declara as variaveis para efetuar o calculo da media
+        //        declara as variaveis para efetuar o calculo da presenca
         int aulas = Integer.parseInt(edAulas.getText().toString());
         int faltas = Integer.parseInt(edFaltas.getText().toString());
 
