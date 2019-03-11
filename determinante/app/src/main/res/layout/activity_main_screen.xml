@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <TextView
+        android:id="@+id/tvMatriz"
+        android:layout_width="368dp"
+        android:layout_height="22dp"
+        android:text="M (3x3) ="
+        app:layout_constraintBottom_toTopOf="@+id/edL1C1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:onClick="calcularDeterminante"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edL3C1"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edL1C1"
+        android:layout_width="117dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/edL2C1"
+        app:layout_constraintEnd_toStartOf="@+id/edL1C2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriz" />
+
+    <EditText
+        android:id="@+id/edL2C1"
+        android:layout_width="117dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/edL3C1"
+        app:layout_constraintEnd_toStartOf="@+id/edL2C2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edL1C1" />
+
+    <EditText
+        android:id="@+id/edL3C1"
+        android:layout_width="117dp"
+        android:layout_height="116dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintEnd_toStartOf="@+id/edL3C2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edL2C1" />
+
+    <EditText
+        android:id="@+id/edL1C2"
+        android:layout_width="117dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/edL2C2"
+        app:layout_constraintEnd_toStartOf="@+id/edL1C3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edL1C1"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriz" />
+
+    <EditText
+        android:id="@+id/edL2C2"
+        android:layout_width="117dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/edL3C2"
+        app:layout_constraintEnd_toStartOf="@+id/edL2C3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edL2C1"
+        app:layout_constraintTop_toBottomOf="@+id/edL1C2" />
+
+    <EditText
+        android:id="@+id/edL3C2"
+        android:layout_width="117dp"
+        android:layout_height="116dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintEnd_toStartOf="@+id/edL3C3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edL3C1"
+        app:layout_constraintTop_toBottomOf="@+id/edL2C2" />
+
+    <EditText
+        android:id="@+id/edL1C3"
+        android:layout_width="118dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/edL2C3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edL1C2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriz" />
+
+    <EditText
+        android:id="@+id/edL2C3"
+        android:layout_width="118dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/edL3C3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edL2C2"
+        app:layout_constraintTop_toBottomOf="@+id/edL1C3" />
+
+    <EditText
+        android:id="@+id/edL3C3"
+        android:layout_width="118dp"
+        android:layout_height="116dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edL3C2"
+        app:layout_constraintTop_toBottomOf="@+id/edL2C3" />
+
+</android.support.constraint.ConstraintLayout>
