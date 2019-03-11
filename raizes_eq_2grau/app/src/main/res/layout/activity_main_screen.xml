@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <TextView
+        android:id="@+id/tvAX2"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="ax²"
+        app:layout_constraintBottom_toTopOf="@+id/edAX2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvBX"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="bx"
+        app:layout_constraintBottom_toTopOf="@+id/edBX"
+        app:layout_constraintTop_toBottomOf="@+id/edAX2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvC"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="c"
+        app:layout_constraintBottom_toTopOf="@+id/edC"
+        app:layout_constraintTop_toBottomOf="@+id/edBX"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edAX2"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/tvBX"
+        app:layout_constraintTop_toBottomOf="@+id/tvAX2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edBX"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/tvC"
+        app:layout_constraintTop_toBottomOf="@+id/tvBX"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edC"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/tvC"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:onClick="calcularRaizes"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edC"
+        tools:layout_editor_absoluteX="8dp" />
+
+</android.support.constraint.ConstraintLayout>
