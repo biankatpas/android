@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <TextView
+        android:id="@+id/tvPresidente"
+        android:layout_width="180dp"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="Presidente"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edP1"
+        app:layout_constraintEnd_toStartOf="@+id/tvVotos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVotos"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="Qtd. de Votos"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edV1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPresidente"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btApurar"
+        android:layout_width="368dp"
+        android:layout_height="43dp"
+        android:onClick="apurarVotos"
+        android:text="Apurar votos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP8"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edP2"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP3"
+        app:layout_constraintEnd_toStartOf="@+id/edV2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP1" />
+
+    <EditText
+        android:id="@+id/edP3"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP4"
+        app:layout_constraintEnd_toStartOf="@+id/edV3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP2" />
+
+    <EditText
+        android:id="@+id/edP4"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP5"
+        app:layout_constraintEnd_toStartOf="@+id/edV4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP3" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="5dp"
+        android:layout_height="484dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toStartOf="@+id/edV4"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/edP4"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <EditText
+        android:id="@+id/edP5"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP6"
+        app:layout_constraintEnd_toStartOf="@+id/edV5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP4" />
+
+    <EditText
+        android:id="@+id/edP6"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP7"
+        app:layout_constraintEnd_toStartOf="@+id/edV6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP5" />
+
+    <EditText
+        android:id="@+id/edP7"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP8"
+        app:layout_constraintEnd_toStartOf="@+id/edV7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP6" />
+
+    <EditText
+        android:id="@+id/edP8"
+        android:layout_width="179dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btApurar"
+        app:layout_constraintEnd_toStartOf="@+id/edV8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edP7" />
+
+    <EditText
+        android:id="@+id/edP1"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edP2"
+        app:layout_constraintEnd_toStartOf="@+id/edV1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPresidente" />
+
+    <EditText
+        android:id="@+id/edV2"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP2"
+        app:layout_constraintTop_toBottomOf="@+id/edV1" />
+
+    <EditText
+        android:id="@+id/edV3"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP3"
+        app:layout_constraintTop_toBottomOf="@+id/edV2" />
+
+    <EditText
+        android:id="@+id/edV4"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP4"
+        app:layout_constraintTop_toBottomOf="@+id/edV3" />
+
+    <EditText
+        android:id="@+id/edV5"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP5"
+        app:layout_constraintTop_toBottomOf="@+id/edV4" />
+
+    <EditText
+        android:id="@+id/edV6"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP6"
+        app:layout_constraintTop_toBottomOf="@+id/edV5" />
+
+    <EditText
+        android:id="@+id/edV7"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP7"
+        app:layout_constraintTop_toBottomOf="@+id/edV6" />
+
+    <EditText
+        android:id="@+id/edV8"
+        android:layout_width="181dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btApurar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP8"
+        app:layout_constraintTop_toBottomOf="@+id/edV7" />
+
+    <EditText
+        android:id="@+id/edV1"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edV2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edP1"
+        app:layout_constraintTop_toBottomOf="@+id/tvVotos" />
+
+</android.support.constraint.ConstraintLayout>
