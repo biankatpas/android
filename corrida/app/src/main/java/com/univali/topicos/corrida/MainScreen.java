@@ -3,6 +3,7 @@ package com.univali.topicos.corrida;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
@@ -175,51 +176,32 @@ public class MainScreen extends AppCompatActivity
 
     public Calendar calcularMedia(Map<String, Calendar> corrida)
     {
-        Calendar total = new GregorianCalendar();
-        total.set(Calendar.HOUR_OF_DAY,0);
-        total.set(Calendar.MINUTE,0);
-        total.set(Calendar.SECOND,0);
+        long total = 0;
 
         for (Calendar tempo : corrida.values())
         {
-            total.add(Calendar.HOUR_OF_DAY, tempo.get(Calendar.HOUR_OF_DAY));
-            total.add(Calendar.MINUTE, tempo.get(Calendar.MINUTE));
-            total.add(Calendar.SECOND, tempo.get(Calendar.SECOND));
+            total += tempo.getTimeInMillis();
         }
-        int h = total.get(Calendar.HOUR_OF_DAY) / corrida.size();
-        int m = total.get(Calendar.MINUTE) / corrida.size();
-        int s = total.get(Calendar.SECOND) / corrida.size();
+        long m = total / corrida.size();
 
         Calendar media = new GregorianCalendar();
-        media.set(Calendar.HOUR_OF_DAY, h);
-        media.set(Calendar.MINUTE, m);
-        media.set(Calendar.SECOND, s);
+        media.setTimeInMillis(m);
         return media;
     }
 
     public Calendar calcularDesvioPadrao(Map<String, Calendar> corrida)
     {
-        double totalH = 0;
-        double totalM = 0;
-        double totalS = 0;
+        long total = 0;
 
         Calendar media = calcularMedia(corrida);
-        for (Calendar tempo : corrida.values())
-        {
-            totalH += Math.pow(tempo.get(Calendar.HOUR_OF_DAY) - media.get(Calendar.HOUR_OF_DAY), 2);
-            totalM += Math.pow(tempo.get(Calendar.MINUTE) - media.get(Calendar.MINUTE), 2);
-            totalS += Math.pow(tempo.get(Calendar.SECOND) - media.get(Calendar.SECOND), 2);
-        }
+        Log.i("media", media.get(Calendar.HOUR_OF_DAY)+":"+media.get(Calendar.MINUTE)+":"+media.get(Calendar.SECOND));
 
-        double desvioH = Math.sqrt(totalH / corrida.size());
-        double desvioM = Math.sqrt(totalM / corrida.size());
-        double desvioS = Math.sqrt(totalS / corrida.size());
+        for (Calendar tempo : corrida.values())
+            total += Math.pow(tempo.getTimeInMillis() - media.getTimeInMillis(), 2);
+        long d = (long) Math.sqrt(total / corrida.size());
 
         Calendar desvio = new GregorianCalendar();
-        desvio.set(Calendar.HOUR_OF_DAY, (int) Math.round(desvioH));
-        desvio.set(Calendar.MINUTE, (int) Math.round(desvioM));
-        desvio.set(Calendar.SECOND, (int) Math.round(desvioS));
-
+        desvio.setTimeInMillis(d);
         return desvio;
     }
 
