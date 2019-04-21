@@ -16,17 +16,23 @@ public class CidadeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cidade);
 
         Intent intent = getIntent();
-        String nome = (String) intent.getSerializableExtra("nome");
-        String area = (String) intent.getSerializableExtra("area");
-        String populacao = (String) intent.getSerializableExtra("populacao");
-        String densidade = (String) intent.getSerializableExtra("densidade");
+        String id = intent.getStringExtra("id");
+        String nome = intent.getStringExtra("nome");
+        String fundacao = intent.getStringExtra("fundacao");
+        String populacao = intent.getStringExtra("populacao");
+        String area = intent.getStringExtra("area");
+        String densidade = intent.getStringExtra("densidade");
 
+        TextView tvId = findViewById(R.id.tvId);
+        tvId.setText(id);
         TextView tvNome = findViewById(R.id.tvNome);
         tvNome.setText(nome);
-        TextView tvArea = findViewById(R.id.tvArea);
-        tvArea.setText(area);
+        TextView tvFundacao = findViewById(R.id.tvFundacao);
+        tvFundacao.setText(fundacao);
         TextView tvPopulacao = findViewById(R.id.tvPopulacao);
         tvPopulacao.setText(populacao);
+        TextView tvArea = findViewById(R.id.tvArea);
+        tvArea.setText(area);
         TextView tvDensidade = findViewById(R.id.tvDensidade);
         tvDensidade.setText(densidade);
     }

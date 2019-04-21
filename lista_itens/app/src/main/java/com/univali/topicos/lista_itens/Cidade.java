@@ -3,16 +3,20 @@ package com.univali.topicos.lista_itens;
 public class Cidade
 {
 
+    private String id;
     private String nome;
+    private String fundacao;
     private String populacao;
     private String area;
     private String densidade;
 
     public Cidade() {}
 
-    public Cidade(String nome, String populacao, String area, String densidade)
+    public Cidade(String id, String nome, String fundacao, String populacao, String area, String densidade)
     {
+        this.id = id;
         this.nome = nome;
+        this.fundacao = fundacao;
         this.populacao = populacao;
         this.area = area;
         this.densidade = densidade;
@@ -56,5 +60,21 @@ public class Cidade
     public void setDensidade(String densidade)
     {
         this.densidade = densidade;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFundacao() {
+        return fundacao;
+    }
+
+    public void setFundacao(String fundacao) {
+        this.fundacao = fundacao;
     }
 }

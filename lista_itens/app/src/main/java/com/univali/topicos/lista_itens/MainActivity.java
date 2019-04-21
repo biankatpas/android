@@ -1,6 +1,8 @@
 package com.univali.topicos.lista_itens;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -14,15 +16,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity
 {
+
     ArrayList<Cidade> cidades;
     ListView lista;
 
@@ -32,79 +35,63 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        getDados();
-
         lista = (ListView) findViewById(R.id.lvCidades);
-        cidades = new ArrayList<>();
+        cidades = adicionarCidades();
 
-        adicionarCidades();
         ArrayAdapter<Cidade> adapter = new CidadeAdapter(this, cidades);
         lista.setAdapter(adapter);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(), "Cidade: "+ cidades.get(position).getNome(), Toast.LENGTH_SHORT).show();
+                Cidade cidade = (Cidade) lista.getItemAtPosition(position);
+                Toast.makeText(getBaseContext(), "Cidade: "+ cidade.getNome(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, CidadeActivity.class);
-                intent.putExtra("nome", cidades.get(position).getNome());
-                intent.putExtra("populacao", cidades.get(position).getPopulacao());
-                intent.putExtra("area", cidades.get(position).getArea());
-                intent.putExtra("densidade", cidades.get(position).getDensidade());
+                intent.putExtra("id", cidade.getId());
+                intent.putExtra("nome", cidade.getNome());
+                intent.putExtra("fundacao", cidade.getFundacao());
+                intent.putExtra("populacao", cidade.getPopulacao());
+                intent.putExtra("area", cidade.getArea());
+                intent.putExtra("densidade", cidade.getDensidade());
                 startActivity(intent);
             }
         });
     }
 
-    public void adicionarCidades()
+    public ArrayList<Cidade> adicionarCidades()
     {
-        Cidade c = new Cidade("Fpolis", "100.000", "300", "40");
-        cidades.add(c);
-        c = new Cidade("São José", "100.000", "300", "40");
-        cidades.add(c);
-        c = new Cidade("Palhoça", "100.000", "300", "40");
-        cidades.add(c);
-        c = new Cidade("Biguaçu", "100.000", "300", "40");
-        cidades.add(c);
-    }
+        ArrayList<Cidade> cidades = new ArrayList<>();
+        AssetManager assetManager = getResources().getAssets();
+        InputStream inputStream;
 
-    private void getDados()
-    {
-        Thread thread = new Thread(new Runnable() {
+        try {
+            inputStream = assetManager.open("cidades.txt");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String linha;
+            while((linha = bufferedReader.readLine())!=null){
+                String nome="";
+                String dados="";
+                char[] c = linha.toCharArray();
+                for ( int i = 0; i < c.length; i++ )
+                    if ( Character.isLetter( c[ i ] ) )
+                        nome+=c[i] ;
+                    else
+                        dados+=c[i];
 
-            @Override
-            public void run() {
-                try  {
-                    Document doc = Jsoup.connect("https://pt.wikipedia.org/wiki/Lista_de_munic%C3%ADpios_de_Santa_Catarina").get();
-                    Element table_indice = doc.getElementById("toc");
-                    Elements row_indice = table_indice.select("tr");
-//                    for (Element r : row_indice)
-//                    {
-//                        Elements cell = r.select("td");
-//                        for(Element c : cell)
-//                        {
-//                            System.out.println(c.text());
-//                        }
-//                    }
-                    ArrayList<String> ids = new ArrayList<>();
-                    ids.add("A");
-//                    for(int i=2; i<ids.size();i++)
-                    {
-                        Element cidade = doc.getElementById(ids.get(0));
-                        Elements dados_cidade = cidade.select("td");
-                        for(Element dados : dados_cidade)
-                        {
-                            System.out.println(dados);
-                        }
-
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
+                String[] result = dados.split(" ");
+                if(result.length>6)
+                {
+                    Cidade cidade = new Cidade(result[0], nome, result[3], result[4], result[5], result[6]);
+                    cidades.add(cidade);
                 }
             }
-        });
+            inputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        thread.start();
+        return cidades;
     }
 
     @Override
