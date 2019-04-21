@@ -14,6 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
@@ -27,8 +32,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        getDados();
+
         lista = (ListView) findViewById(R.id.lvCidades);
-        cidades = adicionarCidades();
+        cidades = new ArrayList<>();
+
+        adicionarCidades();
         ArrayAdapter<Cidade> adapter = new CidadeAdapter(this, cidades);
         lista.setAdapter(adapter);
 
@@ -46,12 +55,9 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    private ArrayList<Cidade> adicionarCidades()
+    public void adicionarCidades()
     {
-        ArrayList<Cidade> cidades = new ArrayList<>();
-        Cidade c = new Cidade("Sto Amaro da Imp", "10.000", "300", "4");
-        cidades.add(c);
-        c = new Cidade("Fpolis", "100.000", "300", "40");
+        Cidade c = new Cidade("Fpolis", "100.000", "300", "40");
         cidades.add(c);
         c = new Cidade("São José", "100.000", "300", "40");
         cidades.add(c);
@@ -59,8 +65,46 @@ public class MainActivity extends AppCompatActivity
         cidades.add(c);
         c = new Cidade("Biguaçu", "100.000", "300", "40");
         cidades.add(c);
+    }
 
-        return cidades;
+    private void getDados()
+    {
+        Thread thread = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try  {
+                    Document doc = Jsoup.connect("https://pt.wikipedia.org/wiki/Lista_de_munic%C3%ADpios_de_Santa_Catarina").get();
+                    Element table_indice = doc.getElementById("toc");
+                    Elements row_indice = table_indice.select("tr");
+//                    for (Element r : row_indice)
+//                    {
+//                        Elements cell = r.select("td");
+//                        for(Element c : cell)
+//                        {
+//                            System.out.println(c.text());
+//                        }
+//                    }
+                    ArrayList<String> ids = new ArrayList<>();
+                    ids.add("A");
+//                    for(int i=2; i<ids.size();i++)
+                    {
+                        Element cidade = doc.getElementById(ids.get(0));
+                        Elements dados_cidade = cidade.select("td");
+                        for(Element dados : dados_cidade)
+                        {
+                            System.out.println(dados);
+                        }
+
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        thread.start();
     }
 
     @Override
