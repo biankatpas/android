@@ -1,67 +1,293 @@
-1 Abdon Batista 26/04/1989 2.656 235,600235,600 11,27
-2 Abelardo Luz 27/07/1958 17.584 1055,3681.055,368 16,66
-5 Água Doce 21/06/1958 7.110 1.3111.311,000 5,42
-6 Águas Frias 12/12/1991 2.430 75,16275,162 32,33
-7 Águas Mornas 29/12/1961 5.926 360,757360,757 16,42
-8 Águas de Chapecó 14/121962 6.313 139,132139,132 45,37
-9 Alfredo Wagner 21/12/1961 9.737 732,277732,277 13,29
-10 Alto Bela Vista 4/07/1995 2.007 103,592103,592 19,37
-13 Anita Garibaldi 17/07/1961 8.230 588,612588,612 13,98
-15 Antônio Carlos 6/11/1963 7.906 229,118229,118 34,5
-16 Apiúna 4/01/1988 10.099 493,529493,529 20,46
-17 Arabutã 12/12/1991 4.270 132,232132,232 32,29
-18 Araquari 5/04/1876 29.593 401,831401,831 73,54
-19 Araranguá 3/04/1880 64.405 303,799303,799 211,99
-20 Armazém 19/12/1958 8.159 173,484 47,03
-21 Arroio Trinta 15/12/1961 3.562 94,333 37,75
-22 Arvoredo 9/01/1992 2.281 90,709 25,14
-23 Ascurra 1/04/1963 7.683 111,672 68,79
-24 Atalanta 27/12/1964 3.310 94,527 35,01
-25 Aurora 6/06/1964 5.661 206,947 27,35
-26 Balneário Arroio do Silva 29/12/1995 10.876 93,819 115,92
-27 Balneário Barra do Sul 9/01/1992 9.330 110,428 84,48
-28 Balneário Camboriú 20/071964 120.926 46,489 2601,17
-29 Balneário Gaivota 29/12/1995 9.259 147,710 62,68
-30 Balneário Piçarras 14/12/1963 19.329 99,071 195,10
-32 Bandeirante 29/09/1995 2.865 146,255 19,58
-33 Barra Bonita 29/12/1995 1.842 93,469 19,70
-34 Barra Velha 7/12/1961 24.943 140,160 177,96
-35 Bela Vista do Toldo 16/04/1994 6.191 534,618 11,58
-36 Belmonte 9/01/1992 2.692 93,604 28,75
-37 Benedito Novo 29/12/1961 10.906 385,402 28,29
-38 Biguaçu 17/04/1833 62.383 324,521 192,23
-39 Blumenau 2/09/1850 329.082 519,8 633,09
-40 Bocaina do Sul 16/07/1994 3.393 496,250 6,83
-41 Bom Jardim da Serra 29/01/1967 4.566 935,177 4,88
-42 Bom Jesus 19/07/1995 2.721 63,522 42,85
-43 Bom Jesus do Oeste 19/07/1995 2.160 67,899 31,81
-44 Bom Retiro 23/01/1923 9.397 1.055,501 8,90
-45 Bombinhas 30/03/1992 16.311 34,489 472,93
-46 Botuverá 7/05/1962 4.785 303,023 15,79
-47 Braço do Norte 22/10/1955 30.868 223,91 137,85
-48 Braço do Trombudo 26/09/1991 3.599 89,681 40,13
-49 Brunópolis 29/12/1995 2.741 335,513 8,16
-50 Brusque 4/08/1860 116.634 280,66 415,57
-51 Caçador 25/03/1934 72.276 981,901 73,60
-52 Caibi 29/03/1965 6.274 171,711 36,53
-54 Camboriú 5/04/1884 74.434 (2015) 212.320 293,62
-69 Chapecó 25/08/1917 198.188 183,561 626,060 316,56
-71 Concórdia 29/07/1934 68.621 797,260 86,32
-80 Curitibanos 11/06/1869 38.799 952,283 39,67
-90 Florianópolis 23/03/1726 453.285 675,409 671,12
-99 Governador Celso Ramos 06/11/1963 13.655 117,182 116,53
-100 Grão-Pará 21/06/1958 6.278 328,097328,097 19,1
-135 Jaguaruna 6/01/1891 16.418 329,459 48,7
-136 Jaraguá do Sul 25/07/1876 148.353 532,590 278,55
-139 Joinville 9/03/1851 526.338 1.126,106 465,42
-140 José Boiteux 26/04/1989 5.054 405,519 11,5
-143 Lages 22/11/1766 157.743 2.631,504 59,65
-188 Paraíso 01/01/2003 4.080 181,243 22,5
-213 Quilombo 06/10/1961 10.201 279,200 36,53
-238 São Bento do Sul 23/09/1873 74.797 495,578 150,93
-250 São José 1/03/1833 239.718 152,387152,387 1573,09
-291 Witmarsum 15/06/1962 3.556 150,798 150,798 20,0
-292 Xanxerê 27/02/1954 41.766 381,41 381,41 109,5
-293 Xavantina 02/02/1964 4.328 215,069 215,069 18,6
-294 Xaxim 30/12/1953 25.223 294,715 294,715 85,3
-295 Zortéa 01/01/1997 2.981 190,149 190,149 15,1
+Abdon Batista, 2.653, 235,6, 11,26
+Abelardo Luz, 17.100, 955,4, 17,9
+Agrolândia, 9.323, 207,1, 45,01
+Agronômica, 4.904, 130, 37,73
+Água Doce, 6.961, 1313, 5,3
+Águas de Chapecó, 6.110, 139,1, 43,92
+Águas Frias, 2.424, 75,2, 32,25
+Águas Mornas, 5.548, 326,5, 16,99
+Alfredo Wagner, 9.410, 732,3, 12,85
+Alto Bela Vista, 2.005, 103,6, 19,35
+Anchieta, 6.380, 228,6, 27,91
+Angelina, 5.250, 499,9, 10,5
+Anita Garibaldi, 8.623, 588,6, 14,65
+Anitápolis, 3.214, 542,4, 5,93
+Antônio Carlos, 7.458, 229,1, 32,55
+Apiúna, 9.600, 493,5, 19,45
+Arabutã, 4.193, 132,2, 31,71
+Araquari, 24.810, 386,1, 64,25
+Araranguá, 61.310, 303,9, 201,74
+Armazém, 7.753, 173,5, 44,69
+Arroio Trinta, 3.502, 94,3, 37,12
+Arvoredo, 2.260, 90,7, 24,91
+Ascurra, 7.412, 111,7, 66,37
+Atalanta, 3.300, 94,5, 34,91
+Aurora, 5.549, 206,9, 26,81
+Balneário Arroio do Silva, 9.586, 94,6, 101,33
+Balneário Barra do Sul, 8.430, 110,5, 76,28
+Balneário Camboriú, 108.089, 46,8, 2309,74
+Balneário Gaivota, 8.234, 147,5, 55,83
+Balneário Piçarras, 17.078, 99,4, 171,82
+Bandeirante, 2.906, 146,3, 19,87
+Barra Bonita, 1.878, 93,5, 20,09
+Barra Velha, 22.386, 140,2, 159,7
+Bela Vista do Toldo, 6.004, 534,6, 11,23
+Belmonte, 2.635, 93,6, 28,15
+Benedito Novo, 10.336, 388,2, 26,62
+Biguaçu, 58.206, 374,5, 155,44
+Blumenau, 309.011, 519,8, 594,44
+Bocaina do Sul, 3.290, 513, 6,41
+Bom Jardim da Serra, 4.395, 935,2, 4,7
+Bom Jesus, 2.526, 63,6, 39,75
+Bom Jesus do Oeste, 2.132, 67,9, 31,4
+Bom Retiro, 8.942, 1055,5, 8,47
+Bombinhas, 14.293, 33,8, 423,28
+Botuverá, 4.468, 303, 14,74
+Braço do Norte, 29.018, 211,6, 137,12
+Braço do Trombudo, 3.457, 89,7, 38,55
+Brunópolis, 2.850, 335,5, 8,49
+Brusque, 105.503, 283,4, 372,22
+Caçador, 70.762, 981,9, 72,07
+Caibi, 6.219, 171,7, 36,22
+Calmon, 3.387, 639,5, 5,3
+Camboriú, 62.361, 214,5, 290,73
+Campo Alegre, 11.748, 496,1, 23,68
+Campo Belo do Sul, 7.483, 1027,4, 7,28
+Campo Erê, 9.370, 478,7, 19,57
+Campos Novos, 32.824, 1719,2, 19,09
+Canelinha, 10.603, 151,4, 70,03
+Canoinhas, 52.765, 1144,8, 46,09
+Capão Alto, 2.753, 1335,3, 2,06
+Capinzal, 20.769, 243,9, 85,15
+Capivari de Baixo, 21.674, 53,2, 407,68
+Catanduvas, 9.555, 198, 48,25
+Caxambu do Sul, 4.411, 140,6, 31,38
+Celso Ramos, 2.771, 207,4, 13,36
+Cerro Negro, 3.581, 416,8, 8,59
+Chapadão do Lageado, 2.762, 124,5, 22,19
+Chapecó, 183.530, 624,3, 293,98
+Cocal do Sul, 15.159, 71,2, 212,88
+Concórdia, 68.621, 797,3, 86,07
+Cordilheira Alta, 3.767, 83,8, 44,97
+Coronel Freitas, 10.213, 234,2, 43,62
+Coronel Martins, 2.458, 107,4, 22,88
+Correia Pinto, 14.785, 651,6, 22,69
+Corupá, 13.852, 405, 34,2
+Criciúma, 192.308, 235,6, 816,15
+Cunha Porã, 10.613, 220,3, 48,18
+Cunhataí, 1.882, 54,5, 34,53
+Curitibanos, 37.748, 952,3, 39,64
+Descanso, 8.634, 285,6, 30,23
+Dionísio Cerqueira, 14.811, 377,7, 39,21
+Dona Emma, 3.721, 181, 20,56
+Doutor Pedrinho, 3.604, 375,8, 9,59
+Entre Rios, 3.018, 105,2, 28,7
+Ermo, 2.050, 63,9, 32,09
+Erval Velho, 4.352, 207,2, 21
+Faxinal dos Guedes, 10.661, 339,6, 31,39
+Flor do Sertão, 1.588, 58,7, 27,05
+Florianópolis, 421.240, 671,6, 627,24
+Formosa do Sul, 2.601, 99,6, 26,12
+Forquilhinha, 22.548, 181,9, 123,95
+Fraiburgo, 34.553, 546,3, 63,25
+Frei Rogério, 2.474, 157,8, 15,67
+Galvão, 3.472, 121,9, 28,48
+Garopaba, 18.138, 115,6, 156,96
+Garuva, 14.761, 501,4, 29,44
+Gaspar, 57.981, 386,4, 150,07
+Governador Celso Ramos, 12.999, 116,7, 111,42
+Grão Pará, 6.223, 336,2, 18,51
+Gravatal, 10.635, 168,4, 63,15
+Guabiruba, 18.430, 173,6, 106,17
+Guaraciaba, 10.498, 330,6, 31,75
+Guaramirim, 35.172, 268,1, 131,18
+Guarujá do Sul, 4.908, 100,5, 48,82
+Guatambú, 4.679, 204,8, 22,85
+Herval d'Oeste, 21.239, 216,8, 97,95
+Ibiam, 1.945, 147,3, 13,2
+Ibicaré, 3.373, 156,1, 21,61
+Ibirama, 17.330, 246,7, 70,25
+Içara, 58.833, 294,1, 200,02
+Ilhota, 12.355, 253,4, 48,75
+Imaruí, 11.672, 542,2, 21,53
+Imbituba, 40.170, 182,5, 220,06
+Imbuia, 5.707, 121,9, 46,82
+Indaial, 54.854, 430,5, 127,41
+Iomerê, 2.739, 114,7, 23,87
+Ipira, 4.752, 155,4, 30,57
+Iporã do Oeste, 8.409, 202,4, 41,55
+Ipuaçu, 6.798, 261,4, 26,01
+Ipumirim, 7.220, 247,1, 29,22
+Iraceminha, 4.253, 164,4, 25,87
+Irani, 9.531, 327, 29,14
+Irati, 2.096, 77,5, 27,04
+Irineópolis, 10.448, 591,3, 17,67
+Itá, 6.426, 165,5, 38,84
+Itaiópolis, 20.301, 1295,3, 15,67
+Itajaí, 183.373, 289,3, 633,75
+Itapema, 45.797, 59,4, 771,5
+Itapiranga, 15.409, 280,1, 55,01
+Itapoá, 14.763, 255,7, 57,73
+Ituporanga, 22.250, 337, 66,03
+Jaborá, 4.041, 191,1, 21,14
+Jacinto Machado, 10.609, 428,8, 24,74
+Jaguaruna, 17.290, 329,4, 52,49
+Jaraguá do Sul, 143.123, 532,6, 268,73
+Jardinópolis, 1.766, 68,1, 25,93
+Joaçaba, 27.020, 232,4, 116,29
+Joinville, 515.288, 1146,9, 449,3
+José Boiteux, 4.721, 405,5, 11,64
+Jupiá, 2.148, 91,7, 23,42
+Lacerdópolis, 2.199, 68,5, 32,12
+Lages, 156.727, 2629,8, 59,6
+Laguna, 51.562, 440,7, 117
+Lajeado Grande, 1.490, 65,9, 22,6
+Laurentino, 6.004, 79,5, 75,52
+Lauro Muller, 14.367, 270,5, 53,11
+Lebon Régis, 11.838, 940,7, 12,58
+Leoberto Leal, 3.365, 291,2, 11,56
+Lindóia do Sul, 4.642, 189,6, 24,49
+Lontras, 10.244, 198,4, 51,63
+Luiz Alves, 10.438, 260,1, 40,13
+Luzerna, 5.600, 116,8, 47,93
+Macieira, 1.826, 260,1, 7,02
+Mafra, 52.912, 1404,2, 37,68
+Major Gercino, 3.279, 285,7, 11,48
+Major Vieira, 7.479, 526, 14,22
+Maracajá, 6.404, 63,4, 101,01
+Maravilha, 22.101, 169,4, 130,43
+Marema, 2.203, 103,6, 21,26
+Massaranduba, 14.674, 373,3, 39,31
+Matos Costa, 2.839, 432,2, 6,57
+Meleiro, 7.000, 186,6, 37,51
+Mirim Doce, 2.513, 336,3, 7,47
+Modelo, 4.045, 92,7, 43,63
+Mondaí, 10.231, 201, 50,91
+Monte Carlo, 9.312, 193,8, 48,06
+Monte Castelo, 8.346, 561,7, 14,86
+Morro da Fumaça, 16.126, 82,9, 194,44
+Morro Grande, 2.890, 256,4, 11,27
+Navegantes, 60.556, 111,5, 543,29
+Nova Erechim, 4.275, 64,4, 66,38
+Nova Itaberaba, 4.267, 137,6, 31,01
+Nova Trento, 12.190, 402,1, 30,31
+Nova Veneza, 13.309, 293,5, 45,34
+Novo Horizonte, 2.750, 151,7, 18,13
+Orleans, 21.393, 549,8, 38,91
+Otacílio Costa, 16.337, 846,6, 19,3
+Ouro, 7.372, 212,7, 34,66
+Ouro Verde, 2.271, 189,3, 12
+Paial, 1.763, 85,8, 20,56
+Painel, 2.353, 739,8, 3,18
+Palhoça, 137.334, 395, 347,68
+Palma Sola, 7.765, 331,8, 23,4
+Palmeira, 2.373, 292,2, 8,12
+Palmitos, 16.020, 350,7, 45,68
+Papanduva, 17.928, 759,8, 23,59
+Paraíso, 4.080, 178,6, 22,84
+Passo de Torres, 6.627, 95,2, 69,61
+Passos Maia, 4.425, 614,4, 7,2
+Paulo Lopes, 6.692, 450,4, 14,86
+Pedras Grandes, 4.107, 171,8, 23,9
+Penha, 25.141, 62, 405,72
+Peritiba, 2.988, 96,4, 31
+Petrolândia, 6.131, 306,2, 20,03
+Pinhalzinho, 16.332, 128,3, 127,3
+Pinheiro Preto, 3.147, 65,7, 47,9
+Piratuba, 4.786, 145,7, 32,85
+Planalto Alegre, 2.654, 62,6, 42,37
+Pomerode, 27.759, 215,9, 128,57
+Ponte Alta, 4.894, 566,8, 8,64
+Ponte Alta do Norte, 3.303, 401, 8,24
+Ponte Serrada, 11.031, 564, 19,56
+Porto Belo, 16.083, 95,8, 167,82
+Porto União, 33.493, 851,2, 39,35
+Pouso Redondo, 14.810, 359,5, 41,19
+Praia Grande, 7.267, 278,6, 26,09
+Presidente Castello Branco, 1.725, 65,4, 26,39
+Presidente Getúlio, 14.887, 295,7, 50,35
+Presidente Nereu, 2.284, 224,7, 10,17
+Princesa, 2.758, 86,2, 31,99
+Quilombo, 10.248, 279,3, 36,69
+Rancho Queimado, 2.748, 286,4, 9,59
+Rio das Antas, 6.143, 317,2, 19,37
+Rio do Campo, 6.192, 506,2, 12,23
+Rio do Oeste, 7.090, 245,6, 28,86
+Rio do Sul, 61.198, 258,4, 236,83
+Rio dos Cedros, 10.284, 555,7, 18,51
+Rio Fortuna, 4.446, 301,9, 14,73
+Rio Negrinho, 39.846, 908,4, 43,86
+Rio Rufino, 2.436, 282,6, 8,62
+Riqueza, 4.838, 190,3, 25,43
+Rodeio, 10.922, 128,1, 85,24
+Romelândia, 5.551, 223,8, 24,81
+Salete, 7.370, 179,3, 41,1
+Saltinho, 3.961, 156,5, 25,3
+Salto Veloso, 4.301, 105, 40,95
+Sangão, 10.400, 83,1, 125,22
+Santa Cecília, 15.757, 1145,3, 13,76
+Santa Helena, 2.382, 81, 29,41
+Santa Rosa de Lima, 2.065, 203, 10,17
+Santa Rosa do Sul, 8.054, 151,4, 53,18
+Santa Terezinha, 8.767, 716,3, 12,24
+Santa Terezinha do Progresso, 2.896, 119, 24,34
+Santiago do Sul, 1.465, 73,6, 19,91
+Santo Amaro da Imperatriz, 19.823, 345, 57,46
+São Bento do Sul, 74.801, 495,6, 150,94
+São Bernardino, 2.677, 145, 18,47
+São Bonifácio, 3.008, 461,3, 6,52
+São Carlos, 10.291, 159, 64,73
+São Cristovão do Sul, 5.012, 349, 14,36
+São Domingos, 9.491, 383,7, 24,74
+São Francisco do Sul, 42.520, 493, 86,25
+São João Batista, 26.260, 220,7, 118,97
+São João do Itaperiú, 3.435, 151,9, 22,61
+São João do Oeste, 6.036, 163,7, 36,88
+São João do Sul, 7.002, 182,7, 38,33
+São Joaquim, 24.812, 1885,6, 13,16
+São José, 209.804, 151,1, 1388,17
+São José do Cedro, 13.684, 279,6, 48,94
+São José do Cerrito, 9.273, 946,2, 9,8
+São Lourenço do Oeste, 21.792, 361,8, 60,24
+São Ludgero, 10.993, 107,6, 102,19
+São Martinho, 3.209, 224,5, 14,29
+São Miguel da Boa Vista, 1.904, 71,9, 26,47
+São Miguel do Oeste, 36.306, 234,4, 154,89
+São Pedro de Alcântara, 4.704, 139,6, 33,69
+Saudades, 9.016, 205,6, 43,86
+Schroeder, 15.316, 143,6, 106,68
+Seara, 16.936, 312,5, 54,19
+Serra Alta, 3.285, 90,4, 36,32
+Siderópolis, 12.998, 262,7, 49,48
+Sombrio, 26.613, 142,8, 186,43
+Sul Brasil, 2.766, 112,7, 24,54
+Taió, 17.260, 693, 24,91
+Tangará, 8.674, 389,2, 22,29
+Tigrinhos, 1.757, 57,4, 30,59
+Tijucas, 30.960, 277,2, 111,69
+Timbé do Sul, 5.308, 333,6, 15,91
+Timbó, 36.774, 127,2, 288,99
+Timbó Grande, 7.167, 596,9, 12,01
+Três Barras, 18.129, 438,1, 41,38
+Treviso, 3.527, 157,7, 22,37
+Treze de Maio, 6.876, 161,1, 42,69
+Treze Tílias, 6.341, 185,2, 34,24
+Trombudo Central, 6.553, 108,7, 60,27
+Tubarão, 97.235, 300,3, 323,76
+Tunápolis, 4.633, 132,9, 34,86
+Turvo, 11.854, 233,7, 50,72
+União do Oeste, 2.910, 93,1, 31,27
+Urubici, 10.699, 1019,2, 10,5
+Urupema, 2.482, 353,1, 7,03
+Urussanga, 20.223, 240,5, 84,1
+Vargeão, 3.532, 166,4, 21,22
+Vargem, 2.808, 350,1, 8,02
+Vargem Bonita, 4.793, 298,6, 16,05
+Vidal Ramos, 6.290, 339,1, 18,55
+Videira, 47.188, 377,9, 124,88
+Vitor Meireles, 5.207, 371,6, 14,01
+Witmarsum, 3.600, 150,8, 23,87
+Xanxerê, 44.128, 377,6, 116,88
+Xavantina, 4.142, 215,1, 19,26
+Xaxim, 25.713, 294,7, 87,25
+Zortéa, 2.991, 190,1, 15,73

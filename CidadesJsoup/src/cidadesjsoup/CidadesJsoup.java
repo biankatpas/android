@@ -34,8 +34,8 @@ public class CidadesJsoup {
             PrintWriter gravarArq = new PrintWriter(arq);
             Document doc = null;
            
-            doc = Jsoup.connect("https://pt.wikipedia.org/wiki/Lista_de_munic%C3%ADpios_de_Santa_Catarina").get();
-            List<Element> elements = doc.getElementById("mw-content-text").select("table").get(2).children().select("tr");
+            doc = Jsoup.connect("https://censo2010.ibge.gov.br/sinopse/index.php?uf=42&dados=0").get();
+            List<Element> elements = doc.getElementById("div_tabela_dados").select("table").select("tbody").select("tr");
             for (Element e : elements)
             {
                 System.out.println(e.text());

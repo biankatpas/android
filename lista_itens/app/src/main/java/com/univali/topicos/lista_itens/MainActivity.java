@@ -2,7 +2,6 @@ package com.univali.topicos.lista_itens;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +20,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -69,22 +67,13 @@ public class MainActivity extends AppCompatActivity
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String linha;
+            int id = 0;
             while((linha = bufferedReader.readLine())!=null){
-                String nome="";
-                String dados="";
-                char[] c = linha.toCharArray();
-                for ( int i = 0; i < c.length; i++ )
-                    if ( Character.isLetter( c[ i ] ) )
-                        nome+=c[i] ;
-                    else
-                        dados+=c[i];
-
-                String[] result = dados.split(" ");
-                if(result.length>6)
-                {
-                    Cidade cidade = new Cidade(result[0], nome, result[3], result[4], result[5], result[6]);
-                    cidades.add(cidade);
-                }
+                id++;
+                String[] result = linha.split(", ");
+                Cidade cidade;
+                cidade = new Cidade(""+id, result[0], "Não disponível", result[1], result[2], result[3]);
+                cidades.add(cidade);
             }
             inputStream.close();
         } catch (IOException e) {
