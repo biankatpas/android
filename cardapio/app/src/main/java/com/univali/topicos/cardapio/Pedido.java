@@ -1,15 +1,24 @@
 package com.univali.topicos.cardapio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Pedido{
+public class Pedido implements Serializable {
+    private static Pedido uniqueInstance;
     private String data;
     private String nome;
     private String endereco;
     private String telefone;
     private ArrayList<Item> items;
 
-    public Pedido() {
+    private Pedido() {
+        items = new ArrayList<>();
+    }
+
+    public static synchronized Pedido getInstance() {
+        if (uniqueInstance == null)
+            uniqueInstance = new Pedido();
+        return uniqueInstance;
     }
 
     public String getData() {

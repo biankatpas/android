@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,7 +28,6 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Pedido pedido = new Pedido();
     ArrayList<Item> items;
     ListView lista;
 
@@ -39,30 +37,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         new RetrieveFeedTask().execute("https://www.w3schools.com/xml/simple.xml");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        String m = "Resuming Activity";
-        System.out.println(m);
-        Toast.makeText(this, m, Toast.LENGTH_LONG).show();
-
-        Intent intent = getIntent();
-        String nome = intent.getStringExtra("nome");
-        String descricao = intent.getStringExtra("descricao");
-        String calorias = intent.getStringExtra("calorias");
-        String preco = intent.getStringExtra("preco");
-       if (intent.getStringExtra("qtd")!=null)
-        {
-            String qtd = intent.getStringExtra("qtd");
-            Log.i("Nome", nome);
-            Log.i("Preco", preco);
-            Log.i("Descricao", descricao);
-            Log.i("Calorias", calorias);
-            Log.i("Qtd", qtd);
-            pedido.addItem(new Item(nome, descricao, calorias, preco, qtd));
-        }
     }
 
     private void setItems(ArrayList<Item> items) {
@@ -89,10 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void finalizarPedido(View v)
     {
-        Bundle b = new Bundle();
-        b.putSerializable("items", (Serializable) pedido.getItems());
         Intent intent = new Intent(MainActivity.this, PedidoActivity.class);
-        intent.putExtras(b);
         startActivity(intent);
     }
 
@@ -111,18 +82,11 @@ public class MainActivity extends AppCompatActivity {
                 DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
                 Document doc = dBuilder.parse(in);
 
-//                System.out.println("Root element : " + doc.getDocumentElement().getNodeName());
-
                 NodeList nodeList = doc.getElementsByTagName("food");
-
-//                System.out.println("----------------------------");
-
 
                 for (int temp = 0; temp < nodeList.getLength(); temp++) {
 
                     Node nNode = nodeList.item(temp);
-
-//                    System.out.println("\nCurrent Element :" + nNode.getNodeName());
 
                     if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -131,11 +95,6 @@ public class MainActivity extends AppCompatActivity {
                         String price = eElement.getElementsByTagName("price").item(0).getTextContent();
                         String description = eElement.getElementsByTagName("description").item(0).getTextContent();
                         String calories = eElement.getElementsByTagName("calories").item(0).getTextContent();
-
-//                        Log.i("Name", name);
-//                        Log.i("Price", price);
-//                        Log.i("Description", description);
-//                        Log.i("Calories", calories);
 
                         foods.add(new Item(name, description, calories, price));
                     }

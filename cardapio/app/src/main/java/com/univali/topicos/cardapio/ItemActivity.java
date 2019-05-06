@@ -12,6 +12,7 @@ public class ItemActivity extends AppCompatActivity
     String descricao;
     String calorias;
     String preco;
+    Pedido pedido = Pedido.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -75,16 +76,11 @@ public class ItemActivity extends AppCompatActivity
 
     public void confirmar(View v)
     {
-        Intent intent = new Intent(ItemActivity.this, MainActivity.class);
-        intent.putExtra("nome", nome);
-        intent.putExtra("descricao", descricao);
-        intent.putExtra("calorias", calorias);
-        intent.putExtra("preco", preco);
-
         TextView tvQuantidade = findViewById(R.id.tvQuantidade);
         String qtd = tvQuantidade.getText().toString().split(": ")[1];
-        intent.putExtra("quantidade", qtd);
+        pedido.addItem(new Item(nome, descricao, calorias, preco, qtd));
 
+        Intent intent = new Intent(ItemActivity.this, MainActivity.class);
         startActivity(intent);
     }
 }
