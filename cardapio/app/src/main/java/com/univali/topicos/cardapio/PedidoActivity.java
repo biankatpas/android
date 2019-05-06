@@ -1,7 +1,9 @@
 package com.univali.topicos.cardapio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -9,21 +11,22 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class PedidoActivity extends AppCompatActivity {
+public class PedidoActivity extends AppCompatActivity
+{
 
     Pedido pedido = new Pedido();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedido);
 
         setDate();
         setHour();
+//        setCaloriasTotais();
+//        setValorTotal();
 
-        Bundle b = getIntent().getExtras();
-        ArrayList<Item> i = (ArrayList<Item>) b.getSerializable("items");
-        pedido.setItems(i);
     }
 
     private void setHour()
@@ -46,7 +49,22 @@ public class PedidoActivity extends AppCompatActivity {
 
     private void setCaloriasTotais()
     {
-        //todo
+        int caloriasTotais = 0;
+
+        Bundle bundle = getIntent().getBundleExtra("BUNDLE");
+        ArrayList<Item> items = (ArrayList<Item>) bundle.getSerializable("items");
+
+        System.out.println("merda");
+//        System.out.println(items.size());
+
+//        for(Item i : items)
+        {
+//            int calorias = Integer.parseInt(i.getCalorias());
+//            int qtd = Integer.parseInt(i.getQuantidade());
+//            caloriasTotais+=calorias*qtd;
+        }
+//        TextView tvCaloriasTotais = findViewById(R.id.tvCaloriasTotais);
+//        tvCaloriasTotais.setText("Calorias totais: " + caloriasTotais);
     }
 
     private void setValorTotal()
@@ -54,7 +72,7 @@ public class PedidoActivity extends AppCompatActivity {
         //todo
     }
 
-    public void enviarPedido()
+    public void enviarPedido(View v)
     {
         //todo: escrever xml
     }

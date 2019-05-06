@@ -1,6 +1,7 @@
 package com.univali.topicos.cardapio;
 
-public class Item {
+public class Item
+{
     private String nome;
     private String descricao;
     private String calorias;
@@ -9,14 +10,16 @@ public class Item {
 
     public Item(){}
 
-    public Item(String nome, String descricao, String calorias, String preco) {
+    public Item(String nome, String descricao, String calorias, String preco)
+    {
         this.nome = nome;
         this.descricao = descricao;
         this.calorias = calorias;
         this.preco = preco;
     }
 
-    public Item(String nome, String descricao, String calorias, String preco, String quantidade) {
+    public Item(String nome, String descricao, String calorias, String preco, String quantidade)
+    {
         this.nome = nome;
         this.descricao = descricao;
         this.calorias = calorias;
