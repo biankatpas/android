@@ -28,8 +28,8 @@ public class ItemAdapter extends ArrayAdapter<Item>
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.linha, parent, false);
 
-        TextView nomeCidade = (TextView) rowView.findViewById(R.id.nome);
-        nomeCidade.setText(elementos.get(position).getNome());
+        TextView nomeItem = (TextView) rowView.findViewById(R.id.nome);
+        nomeItem.setText(elementos.get(position).getNome());
 
         return rowView;
     }
