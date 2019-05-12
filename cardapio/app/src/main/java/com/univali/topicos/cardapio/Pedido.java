@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Pedido implements Serializable {
     private static Pedido uniqueInstance;
     private String data;
+    private String hora;
     private String nome;
     private String endereco;
     private String telefone;
@@ -19,6 +20,14 @@ public class Pedido implements Serializable {
         if (uniqueInstance == null)
             uniqueInstance = new Pedido();
         return uniqueInstance;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 
     public String getData() {

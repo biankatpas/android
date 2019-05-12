@@ -1,10 +1,7 @@
 package com.univali.topicos.cardapio;
 
-import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,11 +19,14 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 public class PedidoActivity extends AppCompatActivity
 {
@@ -94,6 +94,31 @@ public class PedidoActivity extends AppCompatActivity
 
     public void enviarPedido(View v)
     {
+
+        TextView tvData = findViewById(R.id.tvData);
+        pedido.setData(tvData.getText().toString().split(" ")[1]);
+
+        TextView tvHour = findViewById(R.id.tvHorario);
+        pedido.setHora(tvHour.getText().toString().split(" ")[1]);
+
+        TextView tvNome = findViewById(R.id.hNome);
+        pedido.setNome(tvNome.getText().toString());
+
+        TextView tvEndereco = findViewById(R.id.hEndereco);
+        pedido.setEndereco(tvEndereco.getText().toString());
+
+        TextView tvTelefone = findViewById(R.id.hTelefone);
+        pedido.setTelefone(tvTelefone.getText().toString());
+
+        String file = getString(R.string.file);
+        if(file.equals("XML"))
+            sendXML();
+        else if(file.equals("JSON"))
+            sendJSON();
+    }
+
+    private void sendXML()
+    {
         try
         {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -110,20 +135,11 @@ public class PedidoActivity extends AppCompatActivity
             Element phone_number = doc.createElement("phone_number");
             Element items = doc.createElement("items");
 
-            TextView tvData = findViewById(R.id.tvData);
-            date.setAttribute("date", tvData.getText().toString().split(" ")[1]);
-
-            TextView tvHour = findViewById(R.id.tvHorario);
-            hour.setAttribute("hour", tvHour.getText().toString().split(" ")[1]);
-
-            TextView tvNome = findViewById(R.id.hNome);
-            name.setAttribute("name", tvNome.getText().toString());
-
-            TextView tvEndereco = findViewById(R.id.hEndereco);
-            address.setAttribute("address", tvEndereco.getText().toString());
-
-            TextView tvTelefone = findViewById(R.id.hTelefone);
-            phone_number.setAttribute("phone_number", tvTelefone.getText().toString());
+            date.setAttribute("date", pedido.getData());
+            hour.setAttribute("hour", pedido.getHora());
+            name.setAttribute("name", pedido.getNome());
+            address.setAttribute("address", pedido.getEndereco());
+            phone_number.setAttribute("phone_number", pedido.getTelefone());
 
             ArrayList<Item> itemsList = pedido.getItems();
             for(Item i : itemsList)
@@ -161,7 +177,13 @@ public class PedidoActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
+    }
 
-
+    private void sendJSON()
+    {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setDateFormat("M/d/yy hh:mm a");
+        Gson gson = gsonBuilder.create();
+        System.out.println(gson.toJson(pedido, new TypeToken<Pedido>() {}.getType()));
     }
 }

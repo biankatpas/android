@@ -10,6 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -18,7 +22,6 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -59,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void convertToJSON(ArrayList<Item> items)
+    {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setDateFormat("M/d/yy hh:mm a");
+        Gson gson = gsonBuilder.create();
+        System.out.println(gson.toJson(items, new TypeToken<ArrayList<Item>>() {}.getType()));
     }
 
     public void finalizarPedido(View v)
@@ -111,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(ArrayList<Item> result) {
             super.onPostExecute(result);
+            String file = getString(R.string.file);
+            if(file.equals("JSON"))
+                convertToJSON(result);
             setItems(result);
         }
 
