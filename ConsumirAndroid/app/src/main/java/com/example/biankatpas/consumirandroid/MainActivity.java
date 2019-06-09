@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 Item i = (Item) lista.getItemAtPosition(position);
                 Toast.makeText(getBaseContext(), "Item: "+ i.getNome(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, ItemActivity.class);
+                intent.putExtra("id", ""+i.getId());
                 intent.putExtra("nome", i.getNome());
                 intent.putExtra("descricao", i.getDescricao());
                 intent.putExtra("valor", ""+i.getValor());

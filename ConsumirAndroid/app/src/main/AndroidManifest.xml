@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PedidoActivity"></activity>
+        <activity android:name=".ExcluirPedidoActivity"></activity>
+        <activity android:name=".HistoricoActivity" />
+        <activity android:name=".DadosCobrancaActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".PedidoActivity" />
         <activity android:name=".ItemActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
