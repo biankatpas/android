@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,6 +14,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -56,9 +58,8 @@ public class PedidoActivity extends AppCompatActivity {
         tvData.setText("Data: " + dateFormat_data.format(data_atual));
     }
 
-    public void enviarPedido(View v)
-    {
-        if(pedido.isLogged()){
+    public void enviarPedido(View v) {
+        if (pedido.isLogged()) {
             TextView tvData = findViewById(R.id.tvData);
             pedido.setData(tvData.getText().toString().split(" ")[1]);
 
@@ -68,8 +69,19 @@ public class PedidoActivity extends AppCompatActivity {
             sendJSON();
         }
 
-        Intent intent = new Intent(PedidoActivity.this, HistoricoActivity.class);
-        startActivity(intent);
+        AcessoRest ar = new AcessoRest();
+
+        try {
+            Gson g = new Gson();
+            ArrayList<PedidoCompra> pedidos = new ArrayList<>();
+            String resultado = ar.sendGet("http://192.168.0.105:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
+            Type itemType = new TypeToken<ArrayList<PedidoCompra>>() {}.getType();
+            pedidos = g.fromJson(resultado, itemType);
+            Toast.makeText(getBaseContext(), "Pedido "+ (pedidos.get(pedidos.size()-1).getId()+1) + " enviado.", Toast.LENGTH_SHORT).show();
+            TextView tvConfirmacao = findViewById(R.id.tvCodigoConfirmacao);
+            tvConfirmacao.setText("Codigo confirmação: " + (pedidos.get(pedidos.size()-1).getId()+1));
+        } catch (Exception ex) {}
+
     }
 
     private void sendJSON()
@@ -98,4 +110,10 @@ public class PedidoActivity extends AppCompatActivity {
         Intent intent = new Intent(PedidoActivity.this, DadosCobrancaActivity.class);
         startActivity(intent);
     }
+
+    public void visualizarPedidos(View v){
+        Intent intent = new Intent(PedidoActivity.this, HistoricoActivity.class);
+        startActivity(intent);
+    }
+
 }
