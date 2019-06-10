@@ -1,13 +1,13 @@
 package com.example.biankatpas.consumirandroid;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class PedidoCompra
 
 {
     private Long id;
-    private Date data;
+    private String data;
+    private String hora;
     private ArrayList<ItemPedido> itens;
     private Usuario usuario;
 
@@ -16,19 +16,20 @@ public class PedidoCompra
         itens = new ArrayList<>();
     }
 
-    public PedidoCompra(Date data, ArrayList<ItemPedido> itens, Usuario usuario)
+    public PedidoCompra(String data, String hora, ArrayList<ItemPedido> itens, Usuario usuario)
     {
         this.data = data;
+        this.hora = hora;
         this.itens = itens;
         this.usuario = usuario;
     }
 
-    public Date getData()
+    public String getData()
     {
         return data;
     }
 
-    public void setData(Date data)
+    public void setData(String data)
     {
         this.data = data;
     }
@@ -51,6 +52,22 @@ public class PedidoCompra
     public void setUsuario(Usuario usuario)
     {
         this.usuario = usuario;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 }
 

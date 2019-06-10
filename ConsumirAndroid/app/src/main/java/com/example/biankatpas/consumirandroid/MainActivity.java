@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("nome", i.getNome());
                 intent.putExtra("descricao", i.getDescricao());
                 intent.putExtra("valor", ""+i.getValor());
+                intent.putExtra("quantidade", "0");
                 startActivity(intent);
             }
         });
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Gson g = new Gson();
 
-                String resultado = ar.exemploGet(strings[0]);
+                String resultado = ar.sendGet(strings[0]);
                 Log.i("JSON", resultado);
 
                 Type itemType = new TypeToken<ArrayList<Item>>() {}.getType();
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText){
                 ArrayList<Item> tempList = new ArrayList<>();
                 for (Item temp : itens){
-                    if(temp.getNome().toLowerCase().contains(newText.toLowerCase())){
+                    if(temp.getDescricao().toLowerCase().contains(newText.toLowerCase())){
                         tempList.add(temp);
                     }
                 }

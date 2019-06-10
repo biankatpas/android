@@ -28,7 +28,7 @@
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvHora"
+        app:layout_constraintTop_toBottomOf="@+id/btEnviarPedido"
         tools:layout_editor_absoluteX="8dp" />
 
     <Button
@@ -38,6 +38,43 @@
         android:layout_marginTop="8dp"
         android:onClick="enviarPedido"
         android:text="enviar pedido"
-        app:layout_constraintTop_toBottomOf="@+id/tvCodigoConfirmacao"
+        app:layout_constraintTop_toBottomOf="@+id/btAtualizarDados"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvNumeroCartao"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tvHora"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tvCodigoSeguranca"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroCartao"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tdData"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigoSeguranca"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btAtualizarDados"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="atualizarDados"
+        android:text="atualizar dados"
+        app:layout_constraintTop_toBottomOf="@+id/tdData"
         tools:layout_editor_absoluteX="8dp" />
 </android.support.constraint.ConstraintLayout>

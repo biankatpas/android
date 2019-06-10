@@ -17,6 +17,13 @@ public class ItemPedido
         this.valor = valor;
     }
 
+    public ItemPedido(Long id, Item item, int quantidade, double valor) {
+        this.id = id;
+        this.item = item;
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
+
     public Item getItem()
     {
         return item;

@@ -6,4 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".DadosCobrancaActivity">
 
+    <TextView
+        android:id="@+id/tvNumeroCartao"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:text="Numero cartao"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <TextView
+        android:id="@+id/tvCodigoSeguranca"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Codigo Seguranca"
+        app:layout_constraintTop_toBottomOf="@+id/edNumeroCartao"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/tdData"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Data validade"
+        app:layout_constraintTop_toBottomOf="@+id/edCodigoSeguranca"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btAlterarDados"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="alterarDados"
+        android:text="alterar dados"
+        app:layout_constraintTop_toBottomOf="@+id/edDataValidade"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edNumeroCartao"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroCartao"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edCodigoSeguranca"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigoSeguranca"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/edDataValidade"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/tdData"
+        tools:layout_editor_absoluteX="8dp" />
 </android.support.constraint.ConstraintLayout>

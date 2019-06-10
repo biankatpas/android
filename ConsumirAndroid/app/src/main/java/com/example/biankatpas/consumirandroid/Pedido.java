@@ -8,9 +8,11 @@ public class Pedido implements Serializable {
     private String data;
     private String hora;
     private Usuario usuario;
+    private boolean isLogged;
     private ArrayList<ItemPedido> itemsPedido;
 
     private Pedido() {
+        isLogged = false;
         itemsPedido = new ArrayList<>();
     }
 
@@ -56,5 +58,12 @@ public class Pedido implements Serializable {
         this.itemsPedido.add(item);
     }
 
+    public boolean isLogged() {
+        return isLogged;
+    }
+
+    public void setLogged(boolean logged) {
+        isLogged = logged;
+    }
 }
 

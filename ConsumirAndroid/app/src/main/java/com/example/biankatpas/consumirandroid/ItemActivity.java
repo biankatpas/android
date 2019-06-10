@@ -12,6 +12,7 @@ public class ItemActivity extends AppCompatActivity {
     String nome;
     String descricao;
     String valor;
+    String quantidade;
 
     Pedido pedido = Pedido.getInstance();
 
@@ -25,6 +26,7 @@ public class ItemActivity extends AppCompatActivity {
         nome = intent.getStringExtra("nome");
         descricao = intent.getStringExtra("descricao");
         valor = intent.getStringExtra("valor");
+        quantidade = intent.getStringExtra("quantidade");
 
         TextView tvNome = findViewById(R.id.tvNome);
         tvNome.setText("Nome: " + nome);
@@ -32,6 +34,8 @@ public class ItemActivity extends AppCompatActivity {
         tvDescricao.setText("Descrição: " + descricao);
         TextView tvValorUnitario = findViewById(R.id.tvValor);
         tvValorUnitario.setText("Valor Unitario: " + valor);
+        TextView tvQuantidade = findViewById(R.id.tvQuantidade);
+        tvQuantidade.setText("Quantidade: " + quantidade);
     }
 
     public void adicionar(View v)
@@ -56,10 +60,20 @@ public class ItemActivity extends AppCompatActivity {
     {
         TextView tvQuantidade = findViewById(R.id.tvQuantidade);
         String qtd = tvQuantidade.getText().toString().split(": ")[1];
-        pedido.addItem(new ItemPedido(new Item(Double.parseDouble(valor), descricao, nome), Integer.parseInt(qtd), Double.parseDouble(valor)*Integer.parseInt(qtd)));
+        if(pedido.isLogged()){
+            pedido.addItem(new ItemPedido(new Item(Long.parseLong(id), Double.parseDouble(valor), descricao, nome), Integer.parseInt(qtd), Double.parseDouble(valor)*Integer.parseInt(qtd)));
+            Intent intent = new Intent(ItemActivity.this, MainActivity.class);
+            startActivity(intent);
 
-        Intent intent = new Intent(ItemActivity.this, MainActivity.class);
-        startActivity(intent);
+        } else{
+            Intent intent = new Intent(ItemActivity.this, LoginActivity.class);
+            intent.putExtra("id", id);
+            intent.putExtra("nome", nome);
+            intent.putExtra("descricao", descricao);
+            intent.putExtra("valor", valor);
+            intent.putExtra("quantidade", qtd);
+            startActivity(intent);
+        }
     }
 
 }

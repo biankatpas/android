@@ -16,6 +16,14 @@ public class Item
         this.nome = nome;
     }
 
+    public Item(Long id, double valor, String descricao, String nome)
+    {
+        this.id = id;
+        this.valor = valor;
+        this.descricao = descricao;
+        this.nome = nome;
+    }
+
     public double getValor()
     {
         return valor;
