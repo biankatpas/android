@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -30,6 +33,9 @@ public class ItemAdapter extends ArrayAdapter<Item>
 
         TextView nomeItem = (TextView) rowView.findViewById(R.id.nome);
         nomeItem.setText(elementos.get(position).getNome());
+
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.imagem);
+        Picasso.with(context).load(elementos.get(position).getUrl()).into(imageView);
 
         return rowView;
     }

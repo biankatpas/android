@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class ItemActivity extends AppCompatActivity {
 
@@ -13,6 +16,9 @@ public class ItemActivity extends AppCompatActivity {
     String descricao;
     String valor;
     String quantidade;
+    String url;
+
+    ImageView imageView;
 
     Pedido pedido = Pedido.getInstance();
 
@@ -27,6 +33,7 @@ public class ItemActivity extends AppCompatActivity {
         descricao = intent.getStringExtra("descricao");
         valor = intent.getStringExtra("valor");
         quantidade = intent.getStringExtra("quantidade");
+        url = intent.getStringExtra("url");
 
         TextView tvNome = findViewById(R.id.tvNome);
         tvNome.setText("Nome: " + nome);
@@ -36,6 +43,8 @@ public class ItemActivity extends AppCompatActivity {
         tvValorUnitario.setText("Valor Unitario: " + valor);
         TextView tvQuantidade = findViewById(R.id.tvQuantidade);
         tvQuantidade.setText("Quantidade: " + quantidade);
+        imageView = (ImageView) findViewById(R.id.ivImagem);
+        Picasso.with(this).load(url).into(imageView);
     }
 
     public void adicionar(View v)
@@ -61,7 +70,7 @@ public class ItemActivity extends AppCompatActivity {
         TextView tvQuantidade = findViewById(R.id.tvQuantidade);
         String qtd = tvQuantidade.getText().toString().split(": ")[1];
         if(pedido.isLogged()){
-            pedido.addItem(new ItemPedido(new Item(Long.parseLong(id), Double.parseDouble(valor), descricao, nome), Integer.parseInt(qtd), Double.parseDouble(valor)*Integer.parseInt(qtd)));
+            pedido.addItem(new ItemPedido(new Item(Long.parseLong(id), Double.parseDouble(valor), descricao, nome, url), Integer.parseInt(qtd), Double.parseDouble(valor)*Integer.parseInt(qtd)));
             Intent intent = new Intent(ItemActivity.this, MainActivity.class);
             startActivity(intent);
 

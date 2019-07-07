@@ -38,6 +38,7 @@ public class ItemDAO
                 retorno.setId(res.getLong("id"));
                 retorno.setDescricao(res.getString("descricao"));
                 retorno.setValor(res.getDouble("valor"));
+                retorno.setUrl(res.getString("url"));
             }
             
         } catch (SQLException ex) 
@@ -66,6 +67,7 @@ public class ItemDAO
                 item.setNome(res.getString("nome"));
                 item.setDescricao(res.getString("descricao"));
                 item.setValor(res.getDouble("valor"));
+                item.setUrl(res.getString("url"));
 
                 retorno.add(item);
             }

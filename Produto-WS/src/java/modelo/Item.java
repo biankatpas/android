@@ -7,16 +7,26 @@ public class Item
     private double valor;
     private String descricao;
     private String nome;
+    private String url;
 
     public Item() {}
 
-    public Item(double valor, String descricao, String nome)
+    public Item(double valor, String descricao, String nome, String url)
     {
         this.valor = valor;
         this.descricao = descricao;
         this.nome = nome;
+        this.url = url;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    
     public double getValor()
     {
         return valor;

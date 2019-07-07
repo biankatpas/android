@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".ItemActivity">
 
+    <ImageView
+        android:id="@+id/ivImagem"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
     <TextView
         android:id="@+id/tvNome"
         android:layout_width="395dp"
