@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new RetrieveFeedTask().execute("http://192.168.0.105:8080/Produto-WS/webresources/generic/item/list");
+//        new RetrieveFeedTask().execute("http://10.7.26.47:8080/Produto-WS/webresources/generic/item/list");
+        new RetrieveFeedTask().execute("http://192.168.0.110:8080/Produto-WS/webresources/generic/item/list");
     }
 
     private void setItems(ArrayList<Item> items) {

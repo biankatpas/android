@@ -49,8 +49,8 @@ public class LoginActivity extends AppCompatActivity {
         Log.i("LOGIN", l);
         Log.i("SENHA", s);
 
-        String resultado = ar.sendGet("http://192.168.0.105:8080/Produto-WS/webresources/generic/usuario/get/"+l);
-        Log.i("URL", "http://192.168.0.105:8080/Produto-WS/webresources/generic/usuario/get/"+l);
+        String resultado = ar.sendGet("http://192.168.0.110:8080/Produto-WS/webresources/generic/usuario/get/"+l);
+        Log.i("URL", "http://192.168.0.110:8080/Produto-WS/webresources/generic/usuario/get/"+l);
         Log.i("JSON", resultado);
 
         Type itemType = new TypeToken<Usuario>() {}.getType();

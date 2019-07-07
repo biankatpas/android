@@ -46,7 +46,7 @@ public class ExcluirPedidoActivity extends AppCompatActivity {
         String content = g.toJson(p, itemType);
 
         AcessoRest ar = new AcessoRest();
-        ar.sendDelete("http://192.168.0.105:8080/Produto-WS/webresources/generic/pedidocompra/excluir", content);
+        ar.sendDelete("http://192.168.0.110:8080/Produto-WS/webresources/generic/pedidocompra/excluir", content);
         Intent intent = new Intent(ExcluirPedidoActivity.this, HistoricoActivity.class);
         startActivity(intent);
     }

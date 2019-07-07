@@ -74,7 +74,7 @@ public class PedidoActivity extends AppCompatActivity {
         try {
             Gson g = new Gson();
             ArrayList<PedidoCompra> pedidos = new ArrayList<>();
-            String resultado = ar.sendGet("http://192.168.0.105:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
+            String resultado = ar.sendGet("http://1192.168.0.110:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
             Type itemType = new TypeToken<ArrayList<PedidoCompra>>() {}.getType();
             pedidos = g.fromJson(resultado, itemType);
             Toast.makeText(getBaseContext(), "Pedido "+ (pedidos.get(pedidos.size()-1).getId()+1) + " enviado.", Toast.LENGTH_SHORT).show();
@@ -102,7 +102,7 @@ public class PedidoActivity extends AppCompatActivity {
 
         String content = gson.toJson(p, itemType);
         Log.i("PEDIDO", content);
-        ar.sendPost("http://192.168.0.105:8080/Produto-WS/webresources/generic/pedidocompra/inserir", content);
+        ar.sendPost("http://192.168.0.110:8080/Produto-WS/webresources/generic/pedidocompra/inserir", content);
 
     }
 

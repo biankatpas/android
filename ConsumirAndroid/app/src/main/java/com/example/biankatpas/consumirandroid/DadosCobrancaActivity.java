@@ -47,7 +47,7 @@ public class DadosCobrancaActivity extends AppCompatActivity {
         Type itemType = new TypeToken<Usuario>() {}.getType();
         String content = g.toJson(pedido.getUsuario(), itemType);
 
-        ar.sendPut("http://192.168.0.105:8080/Produto-WS/webresources/generic/usuario/alterar", content);
+        ar.sendPut("http://192.168.0.110:8080/Produto-WS/webresources/generic/usuario/alterar", content);
 
         Intent intent = new Intent(DadosCobrancaActivity.this, PedidoActivity.class);
         startActivity(intent);

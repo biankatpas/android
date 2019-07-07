@@ -26,8 +26,8 @@ public class HistoricoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historico);
-        Log.i("HISTORICO", "http://192.168.0.105:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
-        new RetrieveFeedTask().execute("http://192.168.0.105:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
+        Log.i("HISTORICO", "http://192.168.0.110:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
+        new RetrieveFeedTask().execute("http://192.168.0.110:8080/Produto-WS/webresources/generic/pedidocompra/buscar/"+pedido.getUsuario().getId());
     }
 
     private void setItems(ArrayList<PedidoCompra> pedidos) {

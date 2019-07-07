@@ -50,5 +50,5 @@
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:onClick="confirmar"
-        android:text="Confirmar" />
+        android:text="adicionar no carrinho" />
 </LinearLayout>
